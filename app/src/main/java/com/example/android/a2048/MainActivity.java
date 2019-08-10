@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 blankPairs.add(new Pair<Integer, Integer>(i, j));
             }
         }
-        playAgainButton.setVisibility(View.INVISIBLE);
         isGame=true;
         score = 0;
         scoreTextView.setText(""+score);
@@ -176,7 +175,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         fillRandomNo();
         fillRandomNo();
         playAgainButton = (Button)findViewById(R.id.playAgainButton);
-        playAgainButton.setVisibility(View.INVISIBLE);
         isGame=true;
         sharedPreferences = this.getSharedPreferences("com.example.android.a2048",MODE_PRIVATE);
         highScore = sharedPreferences.getLong("highScore",0);
